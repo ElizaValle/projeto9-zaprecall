@@ -11,20 +11,15 @@ export default function Flashcard(props) {
         setResposta(true);
     };
 
-    /* const showQuestion = () => {
-        setPergunta(true);
-    }; */
-
     const handleArrowClick = (index) => {
         setSelecionaCard(index);
         setPergunta(true);
         setResposta(false);
-        alert('oi');
     };
 
     return (
         <>
-            {props.cards.map((index) => {
+            {props.cards.map((card, index) => {
                 return (
                     <CardRow 
                         key={index}
@@ -33,10 +28,9 @@ export default function Flashcard(props) {
                         selecionaCard={selecionaCard !== null}
                         handleArrowClick={() => handleArrowClick(index)} 
                         pergunta={pergunta}
-                        question={props.cards[index].question}
-                        //showQuestion={showQuestion}
+                        question={card.question}
                         resposta={resposta}
-                        answer={props.cards[index].answer}
+                        answer={card.answer}
                         showAnswer={showAnswer}
                         contarPerguntasConcluidas={props.contarPerguntasConcluidas}
                     />

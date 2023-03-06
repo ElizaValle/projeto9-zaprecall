@@ -6,6 +6,7 @@ import Footer from "./components/Footer"
 import cards from "./mock"
 
 export default function App() {
+
     const [perguntasConcluidas, setPerguntasConcluidas] = useState(0); 
 
     function contarPerguntasConcluidas() {

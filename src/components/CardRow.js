@@ -26,7 +26,7 @@ export default function CardRow(props) {
         return button[botaoDaResposta] || (
             <StyledCardRow>
                 <span data-test="flashcard-text">{`Pergunta ${props.index +1}`}</span>
-                <img onClick={props.showAnswer} src={seta_play} alt="seta" />
+                <img onClick={props.handleArrowClick} src={seta_play} alt="seta" />
             </StyledCardRow>
         );
     }
